@@ -1,173 +1,229 @@
 # 📊 Data Science Techniques Applied to Customer Review Analysis for Delivery Agents
 
-A **Data Science and Exploratory Data Analysis (EDA) project** that analyzes customer reviews and delivery-related data to understand **delivery agent performance, customer satisfaction, delivery efficiency, and service quality**.
+A **Data Science and Machine Learning project** that analyzes customer reviews and delivery-related data to understand **customer satisfaction, delivery performance, order accuracy, and delivery-agent performance**.
 
-The project applies data science techniques to identify patterns and relationships within customer review data and convert them into meaningful insights.
+The project applies data preprocessing, exploratory data analysis, statistical analysis, data visualization, regression, and classification techniques to extract meaningful insights from the dataset.
 
 ---
 
 ## 📌 Project Overview
 
-Customer reviews provide valuable information about the quality of delivery services.
+Customer reviews and delivery information contain valuable insights about the quality of delivery services.
 
-However, analyzing large amounts of customer feedback manually can make it difficult to identify important patterns.
+This project analyzes the available data to understand factors that may influence customer satisfaction and delivery performance.
 
-This project uses **Data Science and Exploratory Data Analysis techniques** to analyze delivery-agent review data and understand factors such as:
+The analysis covers:
 
 * Customer ratings
 * Delivery time
-* Customer service
+* Delivery-agent performance
 * Order accuracy
-* Customer feedback
-* Product availability
+* Customer service
 * Order type
-* Discounts
 * Price range
-* Delivery agent performance
+* Discounts
+* Product availability
+* Customer feedback
 
-The complete analysis is implemented in the **`Fast Delivery Agent Reviews(IDS).ipynb`** Jupyter Notebook available in this repository.
+The complete implementation is available in the **`Fast Delivery Agent Reviews(IDS).ipynb`** notebook.
 
 ---
 
 ## 🎯 Objectives
 
-The main objectives of this project are:
-
-* Understand customer feedback related to delivery services.
-* Analyze delivery agent performance.
-* Study customer ratings and satisfaction.
-* Examine delivery-time patterns.
-* Analyze order accuracy.
-* Identify relationships between delivery time and customer ratings.
-* Explore customer-service performance.
-* Analyze product availability and customer feedback.
-* Generate meaningful insights from the data.
+* Analyze customer review and delivery data.
+* Understand customer satisfaction patterns.
+* Analyze delivery-agent performance.
+* Study the relationship between delivery time and ratings.
+* Analyze order accuracy and customer ratings.
+* Apply statistical techniques to the dataset.
+* Build Machine Learning models for prediction.
+* Evaluate the performance of the models.
+* Generate meaningful business insights.
 
 ---
 
 ## 🔄 Project Workflow
 
 ```text
-Customer Review Dataset
-          ↓
-    Data Understanding
-          ↓
-     Data Cleaning
-          ↓
-  Data Preprocessing
-          ↓
- Exploratory Data Analysis
-          ↓
- Statistical Analysis
-          ↓
- Data Visualization
-          ↓
- Pattern & Relationship Analysis
-          ↓
-     Business Insights
+Dataset
+   ↓
+Data Understanding
+   ↓
+Data Cleaning & Preprocessing
+   ↓
+Exploratory Data Analysis
+   ↓
+Data Visualization
+   ↓
+Statistical Analysis
+   ↓
+Feature Preparation
+   ↓
+Machine Learning
+   ↓
+Model Evaluation
+   ↓
+Insights & Conclusions
 ```
 
 ---
 
-## 📊 Data Analysis
+## 🧹 Data Preprocessing
 
-The project analyzes different aspects of delivery and customer feedback.
+The project performs several data preparation steps before analysis and model building.
+
+### Main preprocessing techniques
+
+* Checking dataset structure
+* Handling missing values
+* Checking data types
+* Data cleaning
+* Feature selection
+* Label encoding
+* Preparing data for Machine Learning
+
+### Label Encoding
+
+`LabelEncoder` from Scikit-learn is used to convert categorical values into numerical values so that they can be used by Machine Learning models.
+
+---
+
+## 📊 Exploratory Data Analysis
+
+Exploratory Data Analysis is performed to understand patterns and relationships within the dataset.
+
+The project analyzes:
 
 ### ⭐ Customer Ratings
 
-Customer ratings are analyzed to understand overall satisfaction and compare ratings across different delivery-related factors.
+Customer ratings are analyzed to understand overall customer satisfaction.
 
 ### 🚚 Delivery Time
 
-Delivery times are examined to identify:
+Delivery time is analyzed to understand its relationship with customer ratings and service quality.
 
-* Fast deliveries
-* Slow deliveries
-* Delivery-time patterns
-* Relationship between delivery time and customer ratings
+### 👤 Delivery-Agent Performance
 
-### 👤 Delivery Agent Performance
-
-The analysis compares delivery agents based on available customer feedback and delivery-related metrics.
+Delivery-agent-related data is analyzed to identify differences in customer feedback and performance.
 
 ### ✅ Order Accuracy
 
-The project examines whether orders were delivered correctly and analyzes its relationship with customer satisfaction.
+Order accuracy is examined to understand its relationship with customer satisfaction.
 
 ### 💬 Customer Feedback
 
-Customer feedback is analyzed to understand positive, neutral, and negative experiences.
+Customer feedback is analyzed to identify patterns in customer experiences.
 
-### 🛍️ Order Type
+### 💰 Price & Discounts
 
-Different order categories are explored to understand order distribution and delivery performance.
-
-### 💰 Discounts & Price Range
-
-The project also examines relationships between discounts, price ranges, delivery performance, and customer ratings.
+Price ranges and discounts are explored to understand their relationship with customer behavior and ratings.
 
 ---
 
-## 📈 Exploratory Data Analysis
+## 📈 Data Visualization
 
-The notebook uses visualizations to identify trends and patterns in the dataset.
+The project uses different visualization techniques to identify patterns and communicate findings clearly.
+
+### Visualization Libraries
+
+* **Matplotlib**
+* **Seaborn**
 
 Examples of analysis include:
 
-* Customer rating distribution
-* Average rating by delivery agent
-* Delivery-time analysis
-* Customer-service rating analysis
-* Order accuracy comparison
-* Feedback distribution
-* Delivery performance comparison
-* Order-type analysis
-* Price-range analysis
-* Relationship between delivery time and ratings
-
-These visualizations make it easier to understand the underlying patterns in the data.
+* Rating distributions
+* Delivery-time distributions
+* Correlation analysis
+* Comparison charts
+* Classification visualizations
+* Regression-related plots
 
 ---
 
-## 🧠 Data Science Techniques Used
+## 📐 Statistical Analysis
 
-The project demonstrates several important data science techniques:
+The project uses **SciPy** for statistical analysis.
 
-### 1. Data Understanding
+```python
+from scipy import stats
+```
 
-* Dataset inspection
-* Shape and structure analysis
-* Column identification
-* Data-type analysis
-* Descriptive statistics
+Statistical techniques are used to investigate relationships and patterns in the dataset.
 
-### 2. Data Cleaning
+---
 
-* Missing-value checking
-* Data consistency checking
-* Data preparation
-* Column handling
+# 🤖 Machine Learning
 
-### 3. Exploratory Data Analysis
+The project also applies Machine Learning techniques to the delivery and customer-review data.
 
-* Univariate analysis
-* Bivariate analysis
-* Comparative analysis
-* Distribution analysis
+## 1. Train-Test Split
 
-### 4. Statistical Analysis
+The dataset is divided into training and testing sets using:
 
-Statistical measures are used to understand:
+```python
+from sklearn.model_selection import train_test_split
+```
 
-* Mean
-* Minimum
-* Maximum
-* Distribution
-* Relationships between variables
+This allows the models to be trained on one portion of the data and evaluated on unseen data.
 
-### 5. Data Visualization
+---
 
-Visualizations are used to communicate important patterns and findings clearly.
+## 2. Linear Regression
+
+**Linear Regression** is used for regression-based prediction tasks.
+
+```python
+from sklearn.linear_model import LinearRegression
+```
+
+The model is evaluated using metrics such as:
+
+* Mean Squared Error
+* Mean Absolute Error
+* R² Score
+
+---
+
+## 3. Logistic Regression
+
+**Logistic Regression** is used for classification tasks.
+
+```python
+from sklearn.linear_model import LogisticRegression
+```
+
+The classification model is evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Classification Report
+
+---
+
+## 📏 Model Evaluation
+
+The project uses Scikit-learn evaluation metrics to measure Machine Learning model performance.
+
+### Regression Metrics
+
+* **Mean Squared Error (MSE)**
+* **Mean Absolute Error (MAE)**
+* **R² Score**
+
+### Classification Metrics
+
+* **Accuracy**
+* **Precision**
+* **Recall**
+* **F1-Score**
+* **Confusion Matrix**
+* **Classification Report**
+
+These metrics help determine how well the trained models perform on the test data.
 
 ---
 
@@ -187,11 +243,44 @@ Visualizations are used to communicate important patterns and findings clearly.
 * **Matplotlib**
 * **Seaborn**
 
+### Machine Learning
+
+* **Scikit-learn**
+
+### Statistical Analysis
+
+* **SciPy**
+
 ### Development Environment
 
 * **Jupyter Notebook**
 * **Google Colab**
 
+---
+
+## 📚 Libraries Used
+
+```text
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
+SciPy
+```
+
+### Purpose of Each Library
+
+| Library          | Purpose                                           |
+| ---------------- | ------------------------------------------------- |
+| **Pandas**       | Data loading, cleaning, manipulation and analysis |
+| **NumPy**        | Numerical operations                              |
+| **Matplotlib**   | Data visualization                                |
+| **Seaborn**      | Statistical visualization                         |
+| **Scikit-learn** | Machine Learning, preprocessing and evaluation    |
+| **SciPy**        | Statistical analysis                              |
+
+---
 
 ## 🚀 How to Run the Project
 
@@ -201,7 +290,7 @@ Visualizations are used to communicate important patterns and findings clearly.
 git clone https://github.com/prakruthidevanga/Data-Science-Techniques-Applied-to-Customer-Review-Analysis-for-Delivery-Agents.git
 ```
 
-### 2. Open the Project
+### 2. Navigate to the Project
 
 ```bash
 cd Data-Science-Techniques-Applied-to-Customer-Review-Analysis-for-Delivery-Agents
@@ -215,30 +304,34 @@ Open:
 Fast Delivery Agent Reviews(IDS).ipynb
 ```
 
-You can run it using:
+You can run the notebook using:
 
-* Jupyter Notebook
-* JupyterLab
-* Google Colab
+* **Google Colab**
+* **Jupyter Notebook**
+* **JupyterLab**
 
-### 4. Run the Notebook
+### 4. Install Required Libraries
 
-Execute the cells sequentially to reproduce the data analysis and visualizations.
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn scipy
+```
+
+### 5. Run the Notebook
+
+Execute the cells sequentially to reproduce the data analysis, visualizations, Machine Learning models, and evaluation results.
 
 ---
 
-## 💡 Key Insights
+## 💡 Key Questions Addressed
 
-The analysis helps answer business questions such as:
+The project explores questions such as:
 
-* Which delivery agents receive better customer ratings?
-* How does delivery time affect customer satisfaction?
-* Which order types have more delivery issues?
-* How does order accuracy relate to customer ratings?
-* What patterns can be identified from customer feedback?
-* Which factors may influence delivery-service quality?
-
-The answers are derived from the analysis performed on the dataset in the notebook.
+* How satisfied are customers with the delivery service?
+* How does delivery time affect customer ratings?
+* How does order accuracy relate to customer satisfaction?
+* What patterns can be observed in delivery-agent performance?
+* Which factors are associated with customer ratings?
+* Can Machine Learning models be used to predict outcomes from the available data?
 
 ---
 
@@ -247,31 +340,35 @@ The answers are derived from the analysis performed on the dataset in the notebo
 Through this project, I gained practical experience in:
 
 * Python for Data Science
-* Pandas data manipulation
-* NumPy
+* Data preprocessing
 * Data cleaning
 * Exploratory Data Analysis
 * Statistical analysis
 * Data visualization
-* Customer review analysis
-* Business problem solving
-* Extracting insights from real-world-style data
+* Feature preprocessing
+* Label encoding
+* Train-test splitting
+* Linear Regression
+* Logistic Regression
+* Model evaluation
+* Business-oriented data analysis
+* Extracting insights from customer and delivery data
 
 ---
 
 ## 🔮 Future Enhancements
 
-Possible improvements include:
+Possible future improvements include:
 
-* Sentiment analysis of customer review text
-* Machine Learning for delivery-time prediction
+* NLP-based sentiment analysis of customer reviews
+* Advanced Machine Learning models
 * Customer satisfaction prediction
-* Delivery-agent performance scoring
+* Delivery-agent performance prediction
 * Interactive Power BI dashboard
-* Automated business reports
 * Real-time review analysis
-* NLP-based review classification
-* Integration with a database
+* Automated business reports
+* Deep Learning-based text analysis
+* Deployment as a web application
 
 ---
 
